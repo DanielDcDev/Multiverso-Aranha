@@ -4,6 +4,7 @@
     --primary-color: #B9001F;
     --branco:rgb(255, 255, 255);
     --black: rgb(0,0,0);
+    --qBlack:  rgba(0,0,0,.7);
 }body {
     font-family: "Poppins", sans-serif;
 }

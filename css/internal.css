@@ -1,82 +1,73 @@
 @import url('reset.css');
 @import url('global.css');
+@import url('global.css');
+@import url('/css/components/_navigator.css');
+@import url('/css/components/_pills.css');
+@import url('/css/components/_link-buttom.css');
+@import url('/css/components/_gallery.css');
 
 .s-wrapper {
     display: flex;
     height: 100vh;
     flex-flow: row nowrap; 
+    background-color: aqua
    
   }
   
   .s-wrapper .s-left-column {
     width: 100px;
     height: 100%;
-    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+    position: fixed;
+    padding: 50px;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
   
   .s-wrapper .s-main-content{
     height: 100%;
     width: 100%;
     background-color: gray;
     padding-left: 30px;
+    padding:130px;
   }
-
-
-  /*Navegação*/
-.s-navigator{
+  /*conteudo principal*/
+  .s-wrapper .s-main-content__top{
     height: 80vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    }
+  .s-wrapper .s-main-content__bottom{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.s-wrapper .s-main-content .s-logo img{
+    margin-top: 50px;
+    margin-left: 0;
+    margin-bottom: 30px;
 }
 
-.s-navigator ul li{
-    margin: 40px 0;
-}
+.s-wrapper .s-main-content__top .s-description{
+    background-color: var(--qBlack);
+    max-width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .s-wrapper .s-main-content__top .s-description .s-description__text p{
+    color: var (--branco);
+    line-height: 170%;
+  }
+  
+  .s-wrapper .s-main-content__top .s-description .pills{
+    margin-bottom: 20px;
+  }
+  
 
-.s-navigator ul li:first-child{
-    margin-top: 40px;
-}.s-navigator ul li:last-child{
-    margin-bottom: 40px;
-}
-
-.s-navigator ul li a{
-color: var(--branco);
-border:solid 2px var(--branco);
-width: 45px;
-height: 45px;
-border-radius:50%;
-background-color: var(--black);
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.s-navigator::before{
-    content:'';
-    position: absolute;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background-color: var(--branco);
-    z-index:0;
-}
-.s-navigator ul{
-    z-index: 1;
-}
-.s-navigator ul li a:hover,
-.s-navigator ul li a.active{
-    color: var(--primary-color);
-    background-color: var(--branco);
-}
-
-.s-navigator .s-navigator__icon{
-    position: absolute;
-    top: -20px;
-}
-  /*Navegação*/
+  /*conteudo principal*/
